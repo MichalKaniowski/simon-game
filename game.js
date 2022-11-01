@@ -11,6 +11,16 @@ $(document).keypress(function() {
   }
 })
 
+//for phones
+$(document).click(function() {
+  if (!started) {
+    newSequence();
+    started = true;
+    $("#level-title").text("Level 0");
+  }
+})
+
+
 $(".btn").click(function(event) {
   var userChosenColor = event.target.id;
   userPattern.push(userChosenColor);
